@@ -1,0 +1,34 @@
+name: Update AMVGG values
+
+on:
+  schedule:
+    - cron: '0 6 */3 * *'   # roughly every 3 days
+  workflow_dispatch:         # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-values:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch latest AMVGG values
+        run: node scripts/fetch-amvgg-values.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add values.json
+          if git diff --cached --quiet; then
+            echo "No value changes, nothing to commit."
+            exit 0
+          fi
+          git commit -m "Update AMVGG values [automated]"
+          git push

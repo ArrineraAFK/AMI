@@ -1,0 +1,656 @@
+{
+  "note": "AMVGG 'Absolute' values are refreshed automatically by scripts/fetch-amvgg-values.js (see lastFetchedAt). Ride Potion (AMVGG) and Frost/Shark (Elvebredd) value types are wired up in the UI but not yet sourced — shown as unavailable until fetched.",
+  "sources": [
+    {
+      "id": "amvgg",
+      "label": "AMVGG",
+      "valueTypes": [
+        {
+          "id": "absolute",
+          "label": "Absolute"
+        },
+        {
+          "id": "ridepotion",
+          "label": "Ride Potion"
+        }
+      ]
+    },
+    {
+      "id": "elvebredd",
+      "label": "Elvebredd",
+      "valueTypes": [
+        {
+          "id": "frost",
+          "label": "Frost"
+        },
+        {
+          "id": "shark",
+          "label": "Shark"
+        }
+      ]
+    }
+  ],
+  "pets": [
+    {
+      "name": "2D Kitty",
+      "rarity": "legendary",
+      "origin": "2D Boxes",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.013,
+            "neon": 0.0525,
+            "mega": 0.21
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Kangaroo",
+      "rarity": "legendary",
+      "origin": "Aussie Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.0975,
+            "neon": 0.205,
+            "mega": 0.525
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Turtle",
+      "rarity": "legendary",
+      "origin": "Aussie Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.135,
+            "neon": 0.285,
+            "mega": 0.675
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Sushi Penguin",
+      "rarity": "legendary",
+      "origin": null,
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.009,
+            "neon": 0.035,
+            "mega": 0.14
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Koala",
+      "rarity": "ultrarare",
+      "origin": "Aussie Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.0065,
+            "neon": 0.013,
+            "mega": 0.055
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Cabbit",
+      "rarity": "ultrarare",
+      "origin": "Cherry Blossom Festival (2025)",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.1425,
+            "neon": 0.305,
+            "mega": 1.2
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Sprout Snail",
+      "rarity": "ultrarare",
+      "origin": "Fool Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.00625,
+            "neon": 0.0125,
+            "mega": 0.05
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Frog",
+      "rarity": "ultrarare",
+      "origin": "Aussie Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.00625,
+            "neon": 0.0125,
+            "mega": 0.05
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Tasmanian Devil",
+      "rarity": "rare",
+      "origin": "Aussie Zone",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.00675,
+            "neon": 0.018,
+            "mega": 0.075
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Emu",
+      "rarity": "rare",
+      "origin": "Aussie Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.005,
+            "neon": 0.01,
+            "mega": 0.035
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Pudding Cat",
+      "rarity": "rare",
+      "origin": "Fool Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.0065,
+            "neon": 0.013,
+            "mega": 0.055
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Australian Kelpie",
+      "rarity": "rare",
+      "origin": "Aussie Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.005,
+            "neon": 0.01,
+            "mega": 0.035
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Camel",
+      "rarity": "uncommon",
+      "origin": "Cracked Egg/Pet Egg/Royal Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.003,
+            "neon": 0.005,
+            "mega": 0.01
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Muskrat",
+      "rarity": "uncommon",
+      "origin": "Camping Shop",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.003,
+            "neon": 0.0055,
+            "mega": 0.011
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Dingo",
+      "rarity": "uncommon",
+      "origin": "Aussie Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.00375,
+            "neon": 0.0075,
+            "mega": 0.0225
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Donkey",
+      "rarity": "uncommon",
+      "origin": "Cracked Egg/Pet Egg/Royal Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.003,
+            "neon": 0.005,
+            "mega": 0.01
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Armadillo",
+      "rarity": "common",
+      "origin": "Desert Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.0035,
+            "neon": 0.007,
+            "mega": 0.02
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Bandicoot",
+      "rarity": "common",
+      "origin": "Aussie Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.0035,
+            "neon": 0.007,
+            "mega": 0.02
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Angelfish",
+      "rarity": "common",
+      "origin": "Jungle Zone",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.00375,
+            "neon": 0.0075,
+            "mega": 0.0225
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    },
+    {
+      "name": "Ant",
+      "rarity": "common",
+      "origin": "Cracked Egg/Pet Egg",
+      "sources": {
+        "amvgg": {
+          "absolute": {
+            "regular": 0.003,
+            "neon": 0.005,
+            "mega": 0.008
+          },
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "shark": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          }
+        }
+      }
+    }
+  ],
+  "lastFetchedAt": "2026-08-05T15:07:22.439Z"
+}

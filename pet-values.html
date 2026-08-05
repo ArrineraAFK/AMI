@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>AMI – Pet Values</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="pet-values.css">
+</head>
+<body data-page="pet-values">
+
+<header class="site-header">
+  <div class="site-header-top">
+    <button class="nav-toggle" onclick="toggleNavPanel()" title="Switch page">▦</button>
+    <div class="site-title">
+      <h1>AMI</h1>
+      <p>Pet Values & Calculator</p>
+    </div>
+    <button class="dark-toggle" onclick="toggleDark()" id="dark-btn" title="Dark Mode">🌙</button>
+  </div>
+  <nav class="view-tabs">
+    <button class="view-tab active" data-view="values" onclick="switchView('values')">Values</button>
+    <button class="view-tab" data-view="calculator" onclick="switchView('calculator')">Calculator</button>
+  </nav>
+  <div class="pv-source-bar">
+    <span class="pv-source-label">Values from</span>
+    <div class="dropdown-filter">
+      <button class="subfilter-toggle" id="source-toggle" onclick="toggleSourceDropdown(event)">
+        <span id="source-toggle-label">…</span> <span class="sf-chevron">▾</span>
+      </button>
+      <div class="subfilter-dropdown" id="source-dropdown"></div>
+    </div>
+    <div class="dropdown-filter">
+      <button class="subfilter-toggle" id="valuetype-toggle" onclick="toggleValueTypeDropdown(event)">
+        <span id="valuetype-toggle-label">…</span> <span class="sf-chevron">▾</span>
+      </button>
+      <div class="subfilter-dropdown" id="valuetype-dropdown"></div>
+    </div>
+    <div class="pv-variant-toggle" id="variant-toggle">
+      <button class="pv-variant-btn active" data-variant="regular" onclick="setVariant('regular')">Normal</button>
+      <button class="pv-variant-btn" data-variant="neon" onclick="setVariant('neon')">Neon</button>
+      <button class="pv-variant-btn" data-variant="mega" onclick="setVariant('mega')">Mega</button>
+    </div>
+  </div>
+  <div class="header-search-wrap" id="header-search-wrap">
+    <div class="header-search-row">
+      <div class="search-box" id="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search" placeholder="Search pet…" oninput="onSearchInput()" autocomplete="off" autocorrect="off" autocapitalize="off">
+        <button class="clear-search" onclick="document.getElementById('search').value='';onSearchInput()">✖</button>
+      </div>
+    </div>
+    <button class="search-toggle" id="search-toggle-btn" onclick="toggleSearchBar()" title="Toggle search">
+      <span class="chevron" id="search-toggle-chevron">▾</span>
+    </button>
+  </div>
+</header>
+
+<main class="main">
+  <div class="pv-controls">
+    <select id="pv-rarity-filter" onchange="renderCurrentView()">
+      <option value="all">All Rarities</option>
+      <option value="common">Common</option>
+      <option value="uncommon">Uncommon</option>
+      <option value="rare">Rare</option>
+      <option value="ultrarare">Ultra-Rare</option>
+      <option value="legendary">Legendary</option>
+    </select>
+    <select id="pv-sort" onchange="renderCurrentView()">
+      <option value="value-desc">Value ↓</option>
+      <option value="value-asc">Value ↑</option>
+      <option value="name">Name A–Z</option>
+      <option value="rarity">Rarity</option>
+    </select>
+  </div>
+
+  <div id="view-values">
+    <div class="pv-grid" id="pv-grid"><div class="no-results">⏳ Loading values…</div></div>
+  </div>
+
+  <div id="view-calculator" style="display:none">
+    <div class="pv-calc">
+      <div class="pv-calc-side" data-side="you">
+        <div class="pv-calc-head">
+          <h3>Your Side</h3>
+          <span class="pv-calc-total" id="pv-total-you">0</span>
+          <button class="pv-clear-btn" onclick="clearSide('you')" title="Clear side">🗑</button>
+        </div>
+        <div class="pv-calc-picker">
+          <input type="text" class="pv-calc-search" id="pv-search-you" placeholder="Add a pet…" oninput="renderPicker('you')" autocomplete="off">
+          <div class="pv-calc-picker-list" id="pv-picker-you"></div>
+        </div>
+        <div class="pv-calc-items" id="pv-items-you"></div>
+      </div>
+
+      <div class="pv-calc-fair" id="pv-fairness">
+        <span class="pv-fair-arrow">⇄</span>
+        <span class="pv-fair-badge pv-fair-even">Add pets to compare</span>
+      </div>
+
+      <div class="pv-calc-side" data-side="them">
+        <div class="pv-calc-head">
+          <h3>Their Side</h3>
+          <span class="pv-calc-total" id="pv-total-them">0</span>
+          <button class="pv-clear-btn" onclick="clearSide('them')" title="Clear side">🗑</button>
+        </div>
+        <div class="pv-calc-picker">
+          <input type="text" class="pv-calc-search" id="pv-search-them" placeholder="Add a pet…" oninput="renderPicker('them')" autocomplete="off">
+          <div class="pv-calc-picker-list" id="pv-picker-them"></div>
+        </div>
+        <div class="pv-calc-items" id="pv-items-them"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<div class="modal-overlay" id="modal-input">
+  <div class="modal">
+    <h2 id="modal-input-title">Input</h2>
+    <input type="text" id="modal-input-field" placeholder="" autocomplete="off">
+    <div class="modal-btns">
+      <button onclick="closeInputModal()">Cancel</button>
+      <button class="btn-primary" onclick="confirmInputModal()">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-confirm">
+  <div class="modal">
+    <h2 id="modal-confirm-title">Confirm</h2>
+    <p id="modal-confirm-text"></p>
+    <div class="modal-btns">
+      <button onclick="closeConfirmModal()">Cancel</button>
+      <button class="btn-danger-solid" id="modal-confirm-ok">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="nav-overlay" id="nav-overlay">
+  <nav class="nav-panel" id="nav-panel"></nav>
+</div>
+
+<script src="shared.js"></script>
+<script src="pet-values.js"></script>
+</body>
+</html>
