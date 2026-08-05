@@ -1,4 +1,4 @@
-// Refreshes the AMVGG "absolute" values in values.json by fetching each
+// Refreshes the AMVGG "baseless" values in values.json by fetching each
 // pet's public page (https://amvgg.com/pet/<Name>) and pulling the pet
 // data object that Next.js embeds in the page's RSC payload.
 //
@@ -78,7 +78,7 @@ async function main() {
       const num = v => (v == null ? null : Number(v));
       if (!pet.sources) pet.sources = {};
       if (!pet.sources.amvgg) pet.sources.amvgg = {};
-      pet.sources.amvgg.absolute = {
+      pet.sources.amvgg.baseless = {
         regular: num(obj.regularValue),
         neon: num(obj.neonValue),
         mega: num(obj.megaValue)

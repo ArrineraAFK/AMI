@@ -2,7 +2,7 @@
 let VALUES=[];
 let SOURCES=[];
 let currentSource=null;
-let currentValueType=null; // depends on currentSource, e.g. 'absolute'/'ridepotion' or 'frost'/'shark'
+let currentValueType=null; // depends on currentSource, e.g. 'baseless'/'frost'/'ridepotion' or 'frost'/'shark'
 let currentVariant='regular'; // 'regular' | 'neon' | 'mega'
 let sourceDropdownOpen=false;
 let valueTypeDropdownOpen=false;

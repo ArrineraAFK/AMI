@@ -1,13 +1,17 @@
 {
-  "note": "AMVGG 'Absolute' values are refreshed automatically by scripts/fetch-amvgg-values.js (see lastFetchedAt). Ride Potion (AMVGG) and Frost/Shark (Elvebredd) value types are wired up in the UI but not yet sourced — shown as unavailable until fetched.",
+  "note": "AMVGG 'Baseless' values are refreshed automatically by scripts/fetch-amvgg-values.js (see lastFetchedAt). Frost + Ride Potion (AMVGG) and Frost/Shark (Elvebredd) value types are wired up in the UI but not yet sourced — shown as unavailable until fetched.",
   "sources": [
     {
       "id": "amvgg",
       "label": "AMVGG",
       "valueTypes": [
         {
-          "id": "absolute",
-          "label": "Absolute"
+          "id": "baseless",
+          "label": "Baseless"
+        },
+        {
+          "id": "frost",
+          "label": "Frost"
         },
         {
           "id": "ridepotion",
@@ -37,12 +41,17 @@
       "origin": "2D Boxes",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.013,
             "neon": 0.0525,
             "mega": 0.21
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -68,12 +77,17 @@
       "origin": "Aussie Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.0975,
             "neon": 0.205,
             "mega": 0.525
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -99,12 +113,17 @@
       "origin": "Aussie Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.135,
             "neon": 0.285,
             "mega": 0.675
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -130,12 +149,17 @@
       "origin": null,
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.009,
             "neon": 0.035,
             "mega": 0.14
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -161,12 +185,17 @@
       "origin": "Aussie Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.0065,
             "neon": 0.013,
             "mega": 0.055
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -192,12 +221,17 @@
       "origin": "Cherry Blossom Festival (2025)",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.1425,
             "neon": 0.305,
             "mega": 1.2
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -223,12 +257,17 @@
       "origin": "Fool Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.00625,
             "neon": 0.0125,
             "mega": 0.05
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -254,12 +293,17 @@
       "origin": "Aussie Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.00625,
             "neon": 0.0125,
             "mega": 0.05
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -285,12 +329,17 @@
       "origin": "Aussie Zone",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.00675,
             "neon": 0.018,
             "mega": 0.075
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -316,12 +365,17 @@
       "origin": "Aussie Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.005,
             "neon": 0.01,
             "mega": 0.035
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -347,12 +401,17 @@
       "origin": "Fool Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.0065,
             "neon": 0.013,
             "mega": 0.055
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -378,12 +437,17 @@
       "origin": "Aussie Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.005,
             "neon": 0.01,
             "mega": 0.035
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -409,12 +473,17 @@
       "origin": "Cracked Egg/Pet Egg/Royal Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.003,
             "neon": 0.005,
             "mega": 0.01
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -440,12 +509,17 @@
       "origin": "Camping Shop",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.003,
             "neon": 0.0055,
             "mega": 0.011
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -471,12 +545,17 @@
       "origin": "Aussie Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.00375,
             "neon": 0.0075,
             "mega": 0.0225
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -502,12 +581,17 @@
       "origin": "Cracked Egg/Pet Egg/Royal Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.003,
             "neon": 0.005,
             "mega": 0.01
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -533,12 +617,17 @@
       "origin": "Desert Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.0035,
             "neon": 0.007,
             "mega": 0.02
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -564,12 +653,17 @@
       "origin": "Aussie Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.0035,
             "neon": 0.007,
             "mega": 0.02
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -595,12 +689,17 @@
       "origin": "Jungle Zone",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.00375,
             "neon": 0.0075,
             "mega": 0.0225
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -626,12 +725,17 @@
       "origin": "Cracked Egg/Pet Egg",
       "sources": {
         "amvgg": {
-          "absolute": {
+          "ridepotion": {
+            "regular": null,
+            "neon": null,
+            "mega": null
+          },
+          "baseless": {
             "regular": 0.003,
             "neon": 0.005,
             "mega": 0.008
           },
-          "ridepotion": {
+          "frost": {
             "regular": null,
             "neon": null,
             "mega": null
@@ -652,5 +756,5 @@
       }
     }
   ],
-  "lastFetchedAt": "2026-08-05T15:07:22.439Z"
+  "lastFetchedAt": "2026-08-05T20:23:52.941Z"
 }
