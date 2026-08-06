@@ -330,7 +330,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0001,
             "neon": null,
             "mega": null
           },
@@ -834,7 +834,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0001,
             "neon": null,
             "mega": null
           },
@@ -978,7 +978,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0125,
             "neon": null,
             "mega": null
           },
@@ -2922,7 +2922,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.004,
             "neon": null,
             "mega": null
           },
@@ -3246,7 +3246,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.004,
             "neon": null,
             "mega": null
           },
@@ -4326,7 +4326,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.004,
             "neon": null,
             "mega": null
           },
@@ -4650,7 +4650,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.004,
             "neon": null,
             "mega": null
           },
@@ -5946,7 +5946,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.23,
             "neon": null,
             "mega": null
           },
@@ -8862,7 +8862,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.00015,
             "neon": null,
             "mega": null
           },
@@ -8934,7 +8934,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.18,
             "neon": null,
             "mega": null
           },
@@ -9330,7 +9330,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0002,
             "neon": null,
             "mega": null
           },
@@ -18510,7 +18510,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0004,
             "neon": null,
             "mega": null
           },
@@ -18906,7 +18906,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.028,
             "neon": null,
             "mega": null
           },
@@ -18978,7 +18978,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.00035,
             "neon": null,
             "mega": null
           },
@@ -19088,7 +19088,7 @@
           "baseless": {
             "regular": 4.89,
             "neon": 11.65,
-            "mega": 38.8
+            "mega": 38.3
           },
           "frost": {
             "regular": null,
@@ -19878,7 +19878,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.1,
             "neon": null,
             "mega": null
           },
@@ -20096,7 +20096,7 @@
           "baseless": {
             "regular": 0.92,
             "neon": 2.125,
-            "mega": 7.55
+            "mega": 7.4
           },
           "frost": {
             "regular": null,
@@ -20166,7 +20166,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.00035,
             "neon": null,
             "mega": null
           },
@@ -20310,7 +20310,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.006,
             "neon": null,
             "mega": null
           },
@@ -20418,7 +20418,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.002,
             "neon": null,
             "mega": null
           },
@@ -20598,7 +20598,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.002,
             "neon": null,
             "mega": null
           },
@@ -21282,7 +21282,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0002,
             "neon": null,
             "mega": null
           },
@@ -21356,7 +21356,7 @@
           "baseless": {
             "regular": 0.5825,
             "neon": 1.07,
-            "mega": 4.075
+            "mega": 4.025
           },
           "frost": {
             "regular": null,
@@ -21462,7 +21462,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.41,
             "neon": null,
             "mega": null
           },
@@ -21678,7 +21678,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.004,
             "neon": null,
             "mega": null
           },
@@ -21714,7 +21714,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.005,
             "neon": null,
             "mega": null
           },
@@ -21752,7 +21752,7 @@
           "baseless": {
             "regular": 1.65,
             "neon": 2.95,
-            "mega": 8.625
+            "mega": 8.475
           },
           "frost": {
             "regular": null,
@@ -21966,7 +21966,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.00065,
             "neon": null,
             "mega": null
           },
@@ -22148,7 +22148,7 @@
           "baseless": {
             "regular": 2.44,
             "neon": 4.88,
-            "mega": 17.9
+            "mega": 17.65
           },
           "frost": {
             "regular": null,
@@ -22470,7 +22470,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0011,
             "neon": null,
             "mega": null
           },
@@ -23442,7 +23442,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.002,
             "neon": null,
             "mega": null
           },
@@ -23550,7 +23550,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.42,
             "neon": null,
             "mega": null
           },
@@ -24378,7 +24378,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.00065,
             "neon": null,
             "mega": null
           },
@@ -24558,7 +24558,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0035,
             "neon": null,
             "mega": null
           },
@@ -24738,7 +24738,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0035,
             "neon": null,
             "mega": null
           },
@@ -24848,7 +24848,7 @@
           "baseless": {
             "regular": 1.3,
             "neon": 3.23,
-            "mega": 11.65
+            "mega": 11.5
           },
           "frost": {
             "regular": null,
@@ -24956,7 +24956,7 @@
           "baseless": {
             "regular": 1.03,
             "neon": 2.11,
-            "mega": 5.9
+            "mega": 5.825
           },
           "frost": {
             "regular": null,
@@ -25710,7 +25710,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.007,
             "neon": null,
             "mega": null
           },
@@ -25782,7 +25782,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.008,
             "neon": null,
             "mega": null
           },
@@ -25818,7 +25818,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0003,
             "neon": null,
             "mega": null
           },
@@ -25890,7 +25890,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.01,
             "neon": null,
             "mega": null
           },
@@ -25926,7 +25926,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 1.075,
             "neon": null,
             "mega": null
           },
@@ -26144,7 +26144,7 @@
           "baseless": {
             "regular": 3.575,
             "neon": 7.175,
-            "mega": 19.65
+            "mega": 19.4
           },
           "frost": {
             "regular": null,
@@ -26430,7 +26430,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0035,
             "neon": null,
             "mega": null
           },
@@ -27186,7 +27186,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0055,
             "neon": null,
             "mega": null
           },
@@ -27618,7 +27618,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.0035,
             "neon": null,
             "mega": null
           },
@@ -27654,7 +27654,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.005,
             "neon": null,
             "mega": null
           },
@@ -27762,7 +27762,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": null,
+            "regular": 0.00175,
             "neon": null,
             "mega": null
           },
@@ -27792,9 +27792,5 @@
       }
     }
   ],
-<<<<<<< HEAD
-  "lastFetchedAt": "2026-08-05T20:46:41.981Z"
-=======
-  "lastFetchedAt": "2026-08-05T20:49:15.066Z"
->>>>>>> 1eac1512d1c03e1838bd76a641ecf2c4f309205e
+  "lastFetchedAt": "2026-08-06T12:49:01.519Z"
 }
