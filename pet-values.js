@@ -19,8 +19,8 @@ function valueTypesFor(sourceId){ const s=SOURCES.find(s=>s.id===sourceId); retu
 // only ever has to carry one number per pet per source.
 const DERIVED_VALUE_TYPES={
   amvgg:{
-    frost:1.65 // Frost Dragon's regular baseless value on AMVGG
-    // ridepotion: <divisor once known>
+    frost:1.65,     // Frost Dragon's regular baseless value on AMVGG
+    ridepotion:0.0065 // Ride-A-Pet Potion's regular baseless value on AMVGG
   }
 };
 function round2(n){ return Math.round(n*100)/100; }
