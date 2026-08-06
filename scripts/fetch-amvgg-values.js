@@ -1,6 +1,7 @@
 // Refreshes the AMVGG "baseless" values in values.json by fetching each
-// pet's public page (https://amvgg.com/pet/<Name>) and pulling the pet
-// data object that Next.js embeds in the page's RSC payload.
+// entry's public page and pulling the data object Next.js embeds in the
+// page's RSC payload. Tries /pet/<Name> first (regular/neon/mega values);
+// entries without a pet page (eggs) fall back to /egg/<Name> (single value).
 //
 // Run manually: node scripts/fetch-amvgg-values.js
 // Run periodically via .github/workflows/update-values.yml
@@ -33,11 +34,11 @@ function balancedObject(text, braceStart) {
   return text.slice(braceStart, i);
 }
 
-function extractPetBlock(html) {
-  // The data appears either as literal `"pet":{...}` (rare, direct HTML)
-  // or as `\"pet\":{...}` inside a JS string literal (self.__next_f.push(...)).
+function extractDataBlock(html, key) {
+  // The data appears either as literal `"<key>":{...}` (rare, direct HTML)
+  // or as `\"<key>\":{...}` inside a JS string literal (self.__next_f.push(...)).
   // Try the escaped form first since that's what a plain page load returns.
-  for (const marker of ['\\"pet\\":{', '"pet":{']) {
+  for (const marker of [`\\"${key}\\":{`, `"${key}":{`]) {
     const idx = html.indexOf(marker);
     if (idx < 0) continue;
     const escaped = marker.startsWith('\\');
@@ -56,14 +57,25 @@ function extractPetBlock(html) {
   return null;
 }
 
-async function fetchPet(name) {
-  const url = `https://amvgg.com/pet/${slugify(name)}`;
-  const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } });
-  if (!res.ok) throw new Error('HTTP ' + res.status);
-  const html = await res.text();
-  const obj = extractPetBlock(html);
-  if (!obj) throw new Error('pet data block not found');
-  return obj;
+// Pets have their own page under /pet/<Name> with regular/neon/mega values.
+// Eggs (not pets, so no /pet/ page) live under /egg/<Name> with a single
+// flat "value" instead — normalize both shapes to {regularValue,neonValue,megaValue}.
+async function fetchEntry(name) {
+  const slug = slugify(name);
+
+  const petRes = await fetch(`https://amvgg.com/pet/${slug}`, { headers: { 'User-Agent': USER_AGENT } });
+  if (petRes.ok) {
+    const obj = extractDataBlock(await petRes.text(), 'pet');
+    if (obj) return { regularValue: obj.regularValue, neonValue: obj.neonValue, megaValue: obj.megaValue };
+  }
+
+  const eggRes = await fetch(`https://amvgg.com/egg/${slug}`, { headers: { 'User-Agent': USER_AGENT } });
+  if (eggRes.ok) {
+    const obj = extractDataBlock(await eggRes.text(), 'item');
+    if (obj) return { regularValue: obj.value, neonValue: null, megaValue: null };
+  }
+
+  throw new Error(`not found (pet: ${petRes.status}, egg: ${eggRes.status})`);
 }
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
@@ -74,7 +86,7 @@ async function main() {
 
   for (const pet of data.pets) {
     try {
-      const obj = await fetchPet(pet.name);
+      const obj = await fetchEntry(pet.name);
       const num = v => (v == null ? null : Number(v));
       if (!pet.sources) pet.sources = {};
       if (!pet.sources.amvgg) pet.sources.amvgg = {};
