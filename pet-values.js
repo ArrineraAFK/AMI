@@ -12,9 +12,28 @@ let calcSides={you:[],them:[]};
 function formatValue(n){ return n==null?'—':n.toLocaleString('en-US',{maximumFractionDigits:4}); }
 function currentSourceObj(){ return SOURCES.find(s=>s.id===currentSource); }
 function valueTypesFor(sourceId){ const s=SOURCES.find(s=>s.id===sourceId); return (s&&s.valueTypes)||[]; }
+
+// Some value types aren't stored per-pet — they're just a source's "baseless"
+// value divided by a fixed reference pet's own baseless value, rounded to 2
+// decimals (confirmed against the live site). Computed live so values.json
+// only ever has to carry one number per pet per source.
+const DERIVED_VALUE_TYPES={
+  amvgg:{
+    frost:1.65 // Frost Dragon's regular baseless value on AMVGG
+    // ridepotion: <divisor once known>
+  }
+};
+function round2(n){ return Math.round(n*100)/100; }
 function valueFor(p){
   const src=p.sources&&p.sources[currentSource];
-  const vt=src&&src[currentValueType];
+  if(!src) return null;
+  const derived=DERIVED_VALUE_TYPES[currentSource];
+  const divisor=derived&&derived[currentValueType];
+  if(divisor!=null){
+    const base=src.baseless&&src.baseless[currentVariant];
+    return base==null?null:round2(base/divisor);
+  }
+  const vt=src[currentValueType];
   return vt?(vt[currentVariant]??null):null;
 }
 

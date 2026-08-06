@@ -80,6 +80,9 @@ async function fetchEntry(name) {
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
+// Only "baseless" is fetched/stored. Frost and Ride Potion are derived value
+// types (baseless divided by a reference pet's baseless, rounded) — computed
+// live in pet-values.js at render time instead of being duplicated here.
 async function main() {
   const data = JSON.parse(fs.readFileSync(VALUES_PATH, 'utf8'));
   let updated = 0, failed = [];
