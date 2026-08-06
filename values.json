@@ -19266,9 +19266,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0725,
-            "neon": 0.3,
-            "mega": 1.225
+            "regular": 0.075,
+            "neon": 0.305,
+            "mega": 1.25
           },
           "frost": {
             "regular": null,
@@ -19411,8 +19411,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.1,
-            "neon": 0.345,
-            "mega": 1.37
+            "neon": 0.35,
+            "mega": 1.38
           },
           "frost": {
             "regular": null,
@@ -27222,9 +27222,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0525,
-            "neon": 0.2,
-            "mega": 0.8
+            "regular": 0.055,
+            "neon": 0.205,
+            "mega": 0.825
           },
           "frost": {
             "regular": null,
@@ -27295,8 +27295,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.0475,
-            "neon": 0.19,
-            "mega": 0.775
+            "neon": 0.195,
+            "mega": 0.8
           },
           "frost": {
             "regular": null,
@@ -27792,5 +27792,5 @@
       }
     }
   ],
-  "lastFetchedAt": "2026-08-06T12:49:01.519Z"
+  "lastFetchedAt": "2026-08-06T12:56:21.437Z"
 }
