@@ -640,9 +640,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.005,
-            "neon": 0.01,
-            "mega": 0.035
+            "regular": 0.00475,
+            "neon": 0.0095,
+            "mega": 0.0325
           }
         },
         "elvebredd": {
@@ -7895,8 +7895,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.1,
-            "neon": 0.39,
-            "mega": 1.55
+            "neon": 0.395,
+            "mega": 1.56
           },
           "frost": {
             "regular": null,
@@ -15367,8 +15367,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.0675,
-            "neon": 0.27,
-            "mega": 1.1
+            "neon": 0.275,
+            "mega": 1.125
           },
           "frost": {
             "regular": null,
@@ -16806,9 +16806,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.023,
-            "neon": 0.0925,
-            "mega": 0.375
+            "regular": 0.026,
+            "neon": 0.105,
+            "mega": 0.425
           },
           "frost": {
             "regular": null,
@@ -18246,9 +18246,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0675,
-            "neon": 0.275,
-            "mega": 1.125
+            "regular": 0.07,
+            "neon": 0.28,
+            "mega": 1.15
           },
           "frost": {
             "regular": null,
@@ -18517,8 +18517,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.0825,
-            "neon": 0.335,
-            "mega": 1.375
+            "neon": 0.33,
+            "mega": 1.35
           },
           "frost": {
             "regular": null,
@@ -19567,8 +19567,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.2075,
-            "neon": 0.885,
-            "mega": 3.65
+            "neon": 0.875,
+            "mega": 3.6
           },
           "frost": {
             "regular": null,
@@ -20142,5 +20142,5 @@
       }
     }
   ],
-  "lastFetchedAt": "2026-08-06T14:44:27.911Z"
+  "lastFetchedAt": "2026-08-07T07:06:11.933Z"
 }
