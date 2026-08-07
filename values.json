@@ -640,9 +640,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.005,
-            "neon": 0.01,
-            "mega": 0.035
+            "regular": 0.00475,
+            "neon": 0.0095,
+            "mega": 0.0325
           }
         },
         "elvebredd": {
@@ -1940,7 +1940,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0725,
+            "regular": 0.075,
             "neon": 0.275,
             "mega": 1.075
           }
@@ -4618,9 +4618,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.1925,
-            "neon": 0.41,
-            "mega": 1.18
+            "regular": 0.1975,
+            "neon": 0.42,
+            "mega": 1.2
           }
         },
         "elvebredd": {
@@ -4774,9 +4774,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0875,
-            "neon": 0.275,
-            "mega": 1
+            "regular": 0.09,
+            "neon": 0.28,
+            "mega": 1.01
           }
         },
         "elvebredd": {
@@ -5164,9 +5164,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.1975,
-            "neon": 0.52,
-            "mega": 1.73
+            "regular": 0.2025,
+            "neon": 0.525,
+            "mega": 1.76
           }
         },
         "elvebredd": {
@@ -6100,9 +6100,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0525,
-            "neon": 0.155,
-            "mega": 0.375
+            "regular": 0.055,
+            "neon": 0.16,
+            "mega": 0.38
           }
         },
         "elvebredd": {
@@ -6438,8 +6438,8 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.049,
-            "neon": 0.115,
+            "regular": 0.05,
+            "neon": 0.12,
             "mega": 0.45
           }
         },
@@ -7790,8 +7790,8 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.83,
-            "neon": 2.85,
+            "regular": 0.84,
+            "neon": 2.9,
             "mega": 10.4
           }
         },
@@ -7894,9 +7894,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.1,
-            "neon": 0.39,
-            "mega": 1.55
+            "regular": 0.1025,
+            "neon": 0.4,
+            "mega": 1.59
           },
           "frost": {
             "regular": null,
@@ -7956,7 +7956,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0425,
+            "regular": 0.045,
             "neon": 0.12,
             "mega": 0.44
           }
@@ -8009,8 +8009,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.0525,
-            "neon": 0.21,
-            "mega": 0.85
+            "neon": 0.215,
+            "mega": 0.875
           }
         },
         "elvebredd": {
@@ -8372,9 +8372,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.1425,
-            "neon": 0.305,
-            "mega": 1.2
+            "regular": 0.145,
+            "neon": 0.31,
+            "mega": 1.22
           }
         },
         "elvebredd": {
@@ -8425,8 +8425,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.1075,
-            "neon": 0.43,
-            "mega": 1.72
+            "neon": 0.435,
+            "mega": 1.74
           }
         },
         "elvebredd": {
@@ -8554,9 +8554,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.026,
-            "neon": 0.105,
-            "mega": 0.425
+            "regular": 0.0265,
+            "neon": 0.1075,
+            "mega": 0.43
           }
         },
         "elvebredd": {
@@ -8710,9 +8710,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.075,
+            "regular": 0.0775,
             "neon": 0.245,
-            "mega": 0.875
+            "mega": 0.89
           }
         },
         "elvebredd": {
@@ -8736,9 +8736,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.315,
+            "regular": 0.325,
             "neon": 1.08,
-            "mega": 4.25
+            "mega": 4.325
           }
         },
         "elvebredd": {
@@ -9257,8 +9257,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.009,
-            "neon": 0.0325,
-            "mega": 0.13
+            "neon": 0.033,
+            "mega": 0.135
           }
         },
         "elvebredd": {
@@ -9828,9 +9828,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.355,
-            "neon": 1.34,
-            "mega": 5.375
+            "regular": 0.365,
+            "neon": 1.365,
+            "mega": 5.475
           }
         },
         "elvebredd": {
@@ -10114,9 +10114,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.045,
-            "neon": 0.185,
-            "mega": 0.775
+            "regular": 0.0475,
+            "neon": 0.1925,
+            "mega": 0.79
           }
         },
         "elvebredd": {
@@ -10141,8 +10141,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.055,
-            "neon": 0.2125,
-            "mega": 0.85
+            "neon": 0.215,
+            "mega": 0.86
           }
         },
         "elvebredd": {
@@ -10426,7 +10426,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.075,
+            "regular": 0.0775,
             "neon": 0.2625,
             "mega": 1.04
           }
@@ -10738,9 +10738,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.2275,
-            "neon": 0.65,
-            "mega": 2.3
+            "regular": 0.2325,
+            "neon": 0.66,
+            "mega": 2.325
           }
         },
         "elvebredd": {
@@ -11180,9 +11180,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.195,
-            "neon": 0.78,
-            "mega": 3.125
+            "regular": 0.1975,
+            "neon": 0.79,
+            "mega": 3.175
           }
         },
         "elvebredd": {
@@ -11232,9 +11232,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.145,
-            "neon": 0.53,
-            "mega": 2.1
+            "regular": 0.1475,
+            "neon": 0.535,
+            "mega": 2.125
           }
         },
         "elvebredd": {
@@ -12090,9 +12090,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.055,
-            "neon": 0.225,
-            "mega": 0.92
+            "regular": 0.0575,
+            "neon": 0.23,
+            "mega": 0.93
           }
         },
         "elvebredd": {
@@ -12298,9 +12298,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.12,
-            "neon": 0.25,
-            "mega": 0.77
+            "regular": 0.1225,
+            "neon": 0.255,
+            "mega": 0.78
           }
         },
         "elvebredd": {
@@ -12376,9 +12376,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.018,
-            "neon": 0.0725,
-            "mega": 0.29
+            "regular": 0.0185,
+            "neon": 0.075,
+            "mega": 0.3
           }
         },
         "elvebredd": {
@@ -12896,9 +12896,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0275,
-            "neon": 0.115,
-            "mega": 0.475
+            "regular": 0.03,
+            "neon": 0.12,
+            "mega": 0.5
           }
         },
         "elvebredd": {
@@ -13313,8 +13313,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.0525,
-            "neon": 0.21,
-            "mega": 0.85
+            "neon": 0.215,
+            "mega": 0.875
           }
         },
         "elvebredd": {
@@ -13339,8 +13339,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.009,
-            "neon": 0.035,
-            "mega": 0.14
+            "neon": 0.036,
+            "mega": 0.145
           }
         },
         "elvebredd": {
@@ -13442,9 +13442,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0875,
-            "neon": 0.265,
-            "mega": 1.025
+            "regular": 0.09,
+            "neon": 0.27,
+            "mega": 1.03
           }
         },
         "elvebredd": {
@@ -13598,9 +13598,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.255,
-            "neon": 0.53,
-            "mega": 1.9
+            "regular": 0.265,
+            "neon": 0.535,
+            "mega": 1.925
           }
         },
         "elvebredd": {
@@ -13780,8 +13780,8 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.89,
-            "neon": 2.925,
+            "regular": 0.9,
+            "neon": 2.975,
             "mega": 10.6
           }
         },
@@ -13806,9 +13806,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 4.89,
-            "neon": 11.65,
-            "mega": 38.3
+            "regular": 4.97,
+            "neon": 11.75,
+            "mega": 38
           }
         },
         "elvebredd": {
@@ -13936,9 +13936,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.075,
-            "neon": 0.305,
-            "mega": 1.25
+            "regular": 0.0775,
+            "neon": 0.315,
+            "mega": 1.3
           }
         },
         "elvebredd": {
@@ -13962,9 +13962,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.785,
-            "neon": 3.1,
-            "mega": 10.75
+            "regular": 0.8,
+            "neon": 3.15,
+            "mega": 10.9
           }
         },
         "elvebredd": {
@@ -14040,9 +14040,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.1,
-            "neon": 0.35,
-            "mega": 1.38
+            "regular": 0.1025,
+            "neon": 0.36,
+            "mega": 1.425
           }
         },
         "elvebredd": {
@@ -14120,7 +14120,7 @@
           "baseless": {
             "regular": 0.0575,
             "neon": 0.18,
-            "mega": 0.52
+            "mega": 0.525
           }
         },
         "elvebredd": {
@@ -14170,9 +14170,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.1075,
-            "neon": 0.405,
-            "mega": 1.6
+            "regular": 0.11,
+            "neon": 0.41,
+            "mega": 1.625
           }
         },
         "elvebredd": {
@@ -14222,9 +14222,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.018,
-            "neon": 0.0725,
-            "mega": 0.29
+            "regular": 0.0185,
+            "neon": 0.075,
+            "mega": 0.3
           }
         },
         "elvebredd": {
@@ -14326,7 +14326,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.1725,
+            "regular": 0.175,
             "neon": 0.69,
             "mega": 2.76
           }
@@ -14534,9 +14534,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.92,
-            "neon": 2.125,
-            "mega": 7.4
+            "regular": 0.93,
+            "neon": 2.15,
+            "mega": 7.3
           }
         },
         "elvebredd": {
@@ -14560,9 +14560,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.71,
-            "neon": 1.7,
-            "mega": 6.35
+            "regular": 0.72,
+            "neon": 1.725,
+            "mega": 6.45
           }
         },
         "elvebredd": {
@@ -14640,7 +14640,7 @@
           "baseless": {
             "regular": 0.035,
             "neon": 0.135,
-            "mega": 0.53
+            "mega": 0.54
           }
         },
         "elvebredd": {
@@ -14796,7 +14796,7 @@
           "baseless": {
             "regular": 0.0275,
             "neon": 0.11,
-            "mega": 0.44
+            "mega": 0.45
           }
         },
         "elvebredd": {
@@ -14846,9 +14846,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.335,
-            "neon": 1.21,
-            "mega": 4.85
+            "regular": 0.34,
+            "neon": 1.23,
+            "mega": 4.925
           }
         },
         "elvebredd": {
@@ -14976,9 +14976,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.023,
-            "neon": 0.0925,
-            "mega": 0.37
+            "regular": 0.0235,
+            "neon": 0.095,
+            "mega": 0.38
           }
         },
         "elvebredd": {
@@ -15366,9 +15366,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0675,
-            "neon": 0.27,
-            "mega": 1.1
+            "regular": 0.0725,
+            "neon": 0.29,
+            "mega": 1.175
           },
           "frost": {
             "regular": null,
@@ -15454,9 +15454,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.5825,
-            "neon": 1.07,
-            "mega": 4.025
+            "regular": 0.59,
+            "neon": 1.08,
+            "mega": 4
           }
         },
         "elvebredd": {
@@ -15480,9 +15480,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0775,
-            "neon": 0.23,
-            "mega": 0.91
+            "regular": 0.08,
+            "neon": 0.235,
+            "mega": 0.925
           }
         },
         "elvebredd": {
@@ -15532,7 +15532,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.41,
+            "regular": 0.42,
             "neon": null,
             "mega": null
           }
@@ -15740,9 +15740,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 1.65,
-            "neon": 2.95,
-            "mega": 8.475
+            "regular": 1.675,
+            "neon": 2.98,
+            "mega": 8.375
           }
         },
         "elvebredd": {
@@ -15818,9 +15818,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.07,
-            "neon": 0.285,
-            "mega": 1.15
+            "regular": 0.0725,
+            "neon": 0.29,
+            "mega": 1.175
           }
         },
         "elvebredd": {
@@ -15948,9 +15948,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.023,
-            "neon": 0.0925,
-            "mega": 0.375
+            "regular": 0.024,
+            "neon": 0.0975,
+            "mega": 0.39
           }
         },
         "elvebredd": {
@@ -15974,9 +15974,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 1.04,
-            "neon": 4,
-            "mega": 15.55
+            "regular": 1.05,
+            "neon": 4.025,
+            "mega": 15.65
           }
         },
         "elvebredd": {
@@ -16026,9 +16026,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 2.44,
-            "neon": 4.88,
-            "mega": 17.65
+            "regular": 2.48,
+            "neon": 4.95,
+            "mega": 17.5
           }
         },
         "elvebredd": {
@@ -16650,9 +16650,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.125,
-            "neon": 0.475,
-            "mega": 1.875
+            "regular": 0.1275,
+            "neon": 0.48,
+            "mega": 1.9
           }
         },
         "elvebredd": {
@@ -16702,9 +16702,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.63,
-            "neon": 2.175,
-            "mega": 8.7
+            "regular": 0.64,
+            "neon": 2.225,
+            "mega": 8.85
           }
         },
         "elvebredd": {
@@ -16754,9 +16754,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0225,
-            "neon": 0.09,
-            "mega": 0.36
+            "regular": 0.023,
+            "neon": 0.0925,
+            "mega": 0.375
           }
         },
         "elvebredd": {
@@ -16806,9 +16806,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.023,
-            "neon": 0.0925,
-            "mega": 0.375
+            "regular": 0.0275,
+            "neon": 0.11,
+            "mega": 0.45
           },
           "frost": {
             "regular": null,
@@ -16868,9 +16868,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.2075,
-            "neon": 0.66,
-            "mega": 2.4
+            "regular": 0.2125,
+            "neon": 0.67,
+            "mega": 2.425
           }
         },
         "elvebredd": {
@@ -16894,9 +16894,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0125,
-            "neon": 0.05,
-            "mega": 0.2
+            "regular": 0.013,
+            "neon": 0.0525,
+            "mega": 0.21
           }
         },
         "elvebredd": {
@@ -16946,9 +16946,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0085,
-            "neon": 0.0275,
-            "mega": 0.11
+            "regular": 0.009,
+            "neon": 0.03,
+            "mega": 0.12
           }
         },
         "elvebredd": {
@@ -16998,9 +16998,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.31,
-            "neon": 0.94,
-            "mega": 3.7
+            "regular": 0.32,
+            "neon": 0.95,
+            "mega": 3.75
           }
         },
         "elvebredd": {
@@ -17024,9 +17024,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.026,
-            "neon": 0.105,
-            "mega": 0.425
+            "regular": 0.0275,
+            "neon": 0.11,
+            "mega": 0.44
           }
         },
         "elvebredd": {
@@ -17050,7 +17050,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.42,
+            "regular": 0.43,
             "neon": null,
             "mega": null
           }
@@ -17076,8 +17076,8 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0975,
-            "neon": 0.205,
+            "regular": 0.1,
+            "neon": 0.21,
             "mega": 0.525
           }
         },
@@ -17102,9 +17102,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0095,
-            "neon": 0.0375,
-            "mega": 0.15
+            "regular": 0.01,
+            "neon": 0.04,
+            "mega": 0.16
           }
         },
         "elvebredd": {
@@ -17259,8 +17259,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.025,
-            "neon": 0.0925,
-            "mega": 0.375
+            "neon": 0.0975,
+            "mega": 0.39
           }
         },
         "elvebredd": {
@@ -17492,9 +17492,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0825,
-            "neon": 0.33,
-            "mega": 1.35
+            "regular": 0.085,
+            "neon": 0.34,
+            "mega": 1.375
           }
         },
         "elvebredd": {
@@ -17520,7 +17520,7 @@
           "baseless": {
             "regular": 0.155,
             "neon": 0.46,
-            "mega": 1.675
+            "mega": 1.69
           }
         },
         "elvebredd": {
@@ -17570,9 +17570,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0275,
-            "neon": 0.11,
-            "mega": 0.44
+            "regular": 0.0285,
+            "neon": 0.115,
+            "mega": 0.46
           }
         },
         "elvebredd": {
@@ -17674,9 +17674,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0115,
-            "neon": 0.0475,
-            "mega": 0.19
+            "regular": 0.0125,
+            "neon": 0.05,
+            "mega": 0.2
           }
         },
         "elvebredd": {
@@ -17960,9 +17960,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.56,
-            "neon": 2,
-            "mega": 8
+            "regular": 0.565,
+            "neon": 2.025,
+            "mega": 8.1
           }
         },
         "elvebredd": {
@@ -17986,9 +17986,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 1.3,
-            "neon": 3.23,
-            "mega": 11.5
+            "regular": 1.31,
+            "neon": 3.27,
+            "mega": 11.4
           }
         },
         "elvebredd": {
@@ -18064,9 +18064,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 1.03,
-            "neon": 2.11,
-            "mega": 5.825
+            "regular": 1.04,
+            "neon": 2.13,
+            "mega": 5.8
           }
         },
         "elvebredd": {
@@ -18170,7 +18170,7 @@
           "baseless": {
             "regular": 0.04,
             "neon": 0.16,
-            "mega": 0.65
+            "mega": 0.66
           }
         },
         "elvebredd": {
@@ -18246,9 +18246,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0675,
-            "neon": 0.275,
-            "mega": 1.125
+            "regular": 0.0725,
+            "neon": 0.29,
+            "mega": 1.175
           },
           "frost": {
             "regular": null,
@@ -18386,9 +18386,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.011,
-            "neon": 0.045,
-            "mega": 0.18
+            "regular": 0.0115,
+            "neon": 0.0475,
+            "mega": 0.19
           }
         },
         "elvebredd": {
@@ -18516,9 +18516,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.0825,
-            "neon": 0.335,
-            "mega": 1.375
+            "regular": 0.08,
+            "neon": 0.32,
+            "mega": 1.3
           },
           "frost": {
             "regular": null,
@@ -18578,9 +18578,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.016,
-            "neon": 0.065,
-            "mega": 0.26
+            "regular": 0.0165,
+            "neon": 0.0675,
+            "mega": 0.275
           }
         },
         "elvebredd": {
@@ -18735,8 +18735,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.0625,
-            "neon": 0.25,
-            "mega": 1.025
+            "neon": 0.255,
+            "mega": 1.04
           }
         },
         "elvebredd": {
@@ -18786,7 +18786,7 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 1.075,
+            "regular": 1.125,
             "neon": null,
             "mega": null
           }
@@ -18890,9 +18890,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.014,
-            "neon": 0.0575,
-            "mega": 0.23
+            "regular": 0.015,
+            "neon": 0.06,
+            "mega": 0.24
           }
         },
         "elvebredd": {
@@ -18942,9 +18942,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 3.575,
-            "neon": 7.175,
-            "mega": 19.4
+            "regular": 3.625,
+            "neon": 7.275,
+            "mega": 19.25
           }
         },
         "elvebredd": {
@@ -19046,9 +19046,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.055,
-            "neon": 0.22,
-            "mega": 0.9
+            "regular": 0.06,
+            "neon": 0.2425,
+            "mega": 1
           }
         },
         "elvebredd": {
@@ -19254,8 +19254,8 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.1775,
-            "neon": 0.575,
+            "regular": 0.18,
+            "neon": 0.585,
             "mega": 2.3
           }
         },
@@ -19332,9 +19332,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.045,
-            "neon": 0.185,
-            "mega": 0.775
+            "regular": 0.0475,
+            "neon": 0.1925,
+            "mega": 0.79
           }
         },
         "elvebredd": {
@@ -19358,9 +19358,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.1475,
-            "neon": 0.435,
-            "mega": 1.73
+            "regular": 0.15,
+            "neon": 0.445,
+            "mega": 1.76
           }
         },
         "elvebredd": {
@@ -19567,8 +19567,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.2075,
-            "neon": 0.885,
-            "mega": 3.65
+            "neon": 0.875,
+            "mega": 3.6
           },
           "frost": {
             "regular": null,
@@ -19628,8 +19628,8 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.135,
-            "neon": 0.285,
+            "regular": 0.1375,
+            "neon": 0.29,
             "mega": 0.675
           }
         },
@@ -19654,9 +19654,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.315,
-            "neon": 1.08,
-            "mega": 4.3
+            "regular": 0.325,
+            "neon": 1.11,
+            "mega": 4.4
           }
         },
         "elvebredd": {
@@ -19733,8 +19733,8 @@
         "amvgg": {
           "baseless": {
             "regular": 0.055,
-            "neon": 0.205,
-            "mega": 0.825
+            "neon": 0.21,
+            "mega": 0.84
           }
         },
         "elvebredd": {
@@ -19888,9 +19888,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.1225,
-            "neon": 0.375,
-            "mega": 1.475
+            "regular": 0.125,
+            "neon": 0.38,
+            "mega": 1.5
           }
         },
         "elvebredd": {
@@ -19966,9 +19966,9 @@
       "sources": {
         "amvgg": {
           "baseless": {
-            "regular": 0.07,
-            "neon": 0.28,
-            "mega": 1.15
+            "regular": 0.0725,
+            "neon": 0.29,
+            "mega": 1.175
           }
         },
         "elvebredd": {
@@ -20142,5 +20142,5 @@
       }
     }
   ],
-  "lastFetchedAt": "2026-08-06T14:44:27.911Z"
+  "lastFetchedAt": "2026-08-07T21:56:07.988Z"
 }
