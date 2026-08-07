@@ -19,23 +19,25 @@ function valueTypesFor(sourceId){ const s=SOURCES.find(s=>s.id===sourceId); retu
 // only ever has to carry one number per pet per source.
 const DERIVED_VALUE_TYPES={
   amvgg:{
-    frost:1.65,     // Frost Dragon's regular baseless value on AMVGG
-    ridepotion:0.0065 // Ride-A-Pet Potion's regular baseless value on AMVGG
+    frost:1.65,        // Frost Dragon's regular baseless value on AMVGG
+    ridepotion:0.0064936 // Ride-A-Pet Potion's true regular baseless value on AMVGG,
+    // least-squares fit from 12 known site values (displayed as "0.0065", itself rounded)
   }
 };
 function round2(n){ return Math.round(n*100)/100; }
-function valueFor(p){
+function valueForVariant(p,variant){
   const src=p.sources&&p.sources[currentSource];
   if(!src) return null;
   const derived=DERIVED_VALUE_TYPES[currentSource];
   const divisor=derived&&derived[currentValueType];
   if(divisor!=null){
-    const base=src.baseless&&src.baseless[currentVariant];
+    const base=src.baseless&&src.baseless[variant];
     return base==null?null:round2(base/divisor);
   }
   const vt=src[currentValueType];
-  return vt?(vt[currentVariant]??null):null;
+  return vt?(vt[variant]??null):null;
 }
+function valueFor(p){ return valueForVariant(p,currentVariant); }
 
 // ── VALUE SOURCE + VALUE-TYPE SWITCHERS ───────────────────────────
 function renderSourceBar(){
@@ -118,7 +120,7 @@ function renderValuesTab(){
 
   const grid=document.getElementById('pv-grid');
   if(!list.length){ grid.innerHTML='<div class="no-results">No pets found.</div>'; return; }
-  grid.innerHTML=list.map(p=>`<div class="pv-item">
+  grid.innerHTML=list.map(p=>`<div class="pv-item" onclick="openAttrPanel('${encodeURIComponent(p.name)}',null)">
     ${petImgHtml(p.rarity,p.name)}
     <div class="pet-name">${p.name}</div>
     <span class="rarity-dot ${RARITY_COLOR[p.rarity]||'r-unknown'}"></span>
@@ -129,25 +131,128 @@ function renderValuesTab(){
 }
 
 // ── CALCULATOR TAB ───────────────────────────────────────────────
-function renderPicker(side){
-  const q=document.getElementById('pv-search-'+side).value.trim().toLowerCase();
-  const list=document.getElementById('pv-picker-'+side);
-  if(!q){ list.classList.remove('open'); list.innerHTML=''; return; }
-  const matches=VALUES.filter(p=>p.name.toLowerCase().includes(q)).slice(0,8);
-  if(!matches.length){ list.innerHTML='<div class="pv-calc-empty">No matches</div>'; list.classList.add('open'); return; }
-  list.innerHTML=matches.map(p=>`<div class="pv-pick-row" onclick="addToSide('${side}','${encodeURIComponent(p.name)}')"><span class="pv-pick-name">${p.name}</span><span class="pv-pick-value">${formatValue(valueFor(p))}</span></div>`).join('');
-  list.classList.add('open');
-}
+// "Add a pet" popup: category sidebar + search, opened from a side's "+" slot.
+const PV_CATEGORIES=[
+  {id:'all',label:'All'},
+  {id:'pets',label:'Pets'},
+  {id:'eggs',label:'Eggs'},
+  {id:'petwear',label:'Pet Wear'},
+  {id:'food',label:'Food'},
+  {id:'toys',label:'Toys'},
+  {id:'vehicles',label:'Vehicles'},
+  {id:'strollers',label:'Strollers'},
+  {id:'gifts',label:'Gifts'},
+  {id:'stickers',label:'Stickers'},
+  {id:'houses',label:'Houses'}
+];
+let addModalSide=null;
+let addCategory='all';
 
-function addToSide(side,encodedName){
+function openAddModal(side){
+  addModalSide=side;
+  addCategory='all';
+  document.getElementById('pv-add-search').value='';
+  document.getElementById('pv-add-overlay').classList.add('open');
+  renderAddCategories();
+  renderAddResults();
+  setTimeout(()=>document.getElementById('pv-add-search').focus(),50);
+}
+function closeAddModal(){
+  document.getElementById('pv-add-overlay').classList.remove('open');
+  addModalSide=null;
+}
+function setAddCategory(id){
+  addCategory=id;
+  renderAddCategories();
+  renderAddResults();
+}
+function renderAddCategories(){
+  document.getElementById('pv-add-categories').innerHTML=PV_CATEGORIES.map(c=>
+    `<button class="pv-add-cat-btn${c.id===addCategory?' active':''}" onclick="setAddCategory('${c.id}')">${c.label}</button>`
+  ).join('');
+}
+function renderAddResults(){
+  const grid=document.getElementById('pv-add-results');
+  if(addCategory!=='all'&&addCategory!=='pets'){
+    grid.innerHTML='<div class="pv-add-placeholder">Coming soon</div>';
+    return;
+  }
+  const q=document.getElementById('pv-add-search').value.trim().toLowerCase();
+  let list=VALUES;
+  if(q) list=list.filter(p=>p.name.toLowerCase().includes(q));
+  if(!list.length){ grid.innerHTML='<div class="pv-add-placeholder">No matches</div>'; return; }
+  grid.innerHTML=list.slice(0,120).map(p=>`<div class="pv-add-result-item" onclick="openAttrPanel('${encodeURIComponent(p.name)}','${addModalSide}')">
+    ${petImgHtml(p.rarity,p.name)}
+    <div class="pet-name">${p.name}</div>
+    <span class="pv-value">${formatValue(valueFor(p))}</span>
+  </div>`).join('');
+  observeImages(grid);
+}
+document.getElementById('pv-add-overlay').addEventListener('click',e=>{ if(e.target===e.currentTarget)closeAddModal(); });
+
+// ── PET ATTRIBUTES PANEL (Neon/Mega Neon/Ride/Fly) ─────────────────
+// Ride/Fly are tags only for now — no pricing data found for them on AMVGG,
+// so they don't affect the shown/added value yet.
+let attrPet=null;
+let attrTarget=null; // 'you'|'them' if opened from that side's add popup, else null (Values tab)
+let attrVariant='regular';
+let attrRide=false;
+let attrFly=false;
+
+function openAttrPanel(encodedName,target){
   const name=decodeURIComponent(encodedName);
   const p=VALUES.find(v=>v.name===name);
   if(!p)return;
-  calcSides[side].push(p);
-  document.getElementById('pv-search-'+side).value='';
-  document.getElementById('pv-picker-'+side).classList.remove('open');
-  document.getElementById('pv-picker-'+side).innerHTML='';
-  renderCalculatorTab();
+  attrPet=p;
+  attrTarget=target||null;
+  attrVariant='regular';
+  attrRide=false;
+  attrFly=false;
+  renderAttrPanel();
+  document.getElementById('pv-attr-overlay').classList.add('open');
+}
+function closeAttrPanel(){
+  document.getElementById('pv-attr-overlay').classList.remove('open');
+  attrPet=null;
+}
+function setAttrVariant(v){ attrVariant=v; renderAttrPanel(); }
+function toggleAttrRide(){ attrRide=!attrRide; renderAttrPanel(); }
+function toggleAttrFly(){ attrFly=!attrFly; renderAttrPanel(); }
+function renderAttrPanel(){
+  if(!attrPet)return;
+  const val=valueForVariant(attrPet,attrVariant);
+  const actions=attrTarget
+    ? `<button onclick="confirmAttrAdd('${attrTarget}')">Add to ${attrTarget==='you'?'Your':'Their'} Side</button>`
+    : `<button onclick="confirmAttrAdd('you')">Add to Your Side</button><button onclick="confirmAttrAdd('them')">Add to Their Side</button>`;
+  document.getElementById('pv-attr-body').innerHTML=`
+    <div class="pv-attr-head">
+      ${petImgHtml(attrPet.rarity,attrPet.name)}
+      <div class="pv-attr-name">${attrPet.name}</div>
+    </div>
+    <div class="pv-attr-tier pv-variant-toggle">
+      <button class="pv-variant-btn${attrVariant==='regular'?' active':''}" onclick="setAttrVariant('regular')">Normal</button>
+      <button class="pv-variant-btn${attrVariant==='neon'?' active':''}" onclick="setAttrVariant('neon')">Neon</button>
+      <button class="pv-variant-btn${attrVariant==='mega'?' active':''}" onclick="setAttrVariant('mega')">Mega Neon</button>
+    </div>
+    <div class="pv-attr-toggles">
+      <button class="pv-attr-chip${attrRide?' active':''}" onclick="toggleAttrRide()">🐴 Ride</button>
+      <button class="pv-attr-chip${attrFly?' active':''}" onclick="toggleAttrFly()">🪽 Fly</button>
+    </div>
+    <p class="pv-attr-note">Ride/Fly are tags only for now — no pricing data available yet, so they don't change the value.</p>
+    <div class="pv-attr-value">${formatValue(val)}</div>
+    <div class="pv-attr-actions">${actions}</div>
+  `;
+  observeImages(document.getElementById('pv-attr-body'));
+}
+document.getElementById('pv-attr-overlay').addEventListener('click',e=>{ if(e.target===e.currentTarget)closeAttrPanel(); });
+
+function confirmAttrAdd(side){
+  if(!attrPet)return;
+  calcSides[side].push({pet:attrPet,variant:attrVariant,ride:attrRide,fly:attrFly});
+  closeAttrPanel();
+  document.getElementById('pv-total-'+side).textContent=formatValue(sideTotal(side));
+  renderCalcItems(side);
+  renderFairness();
 }
 
 function removeFromSide(side,idx){
@@ -160,16 +265,34 @@ function clearSide(side){
   openConfirmModal('Clear side','Remove all pets from this side?',()=>{ calcSides[side]=[]; renderCalculatorTab(); });
 }
 
-function sideTotal(side){ return calcSides[side].reduce((s,p)=>s+(valueFor(p)||0),0); }
+function sideTotal(side){ return calcSides[side].reduce((s,item)=>s+(valueForVariant(item.pet,item.variant)||0),0); }
 
+const PV_MIN_SLOTS=6;
 function renderCalcItems(side){
   const el=document.getElementById('pv-items-'+side);
-  if(!calcSides[side].length){ el.innerHTML='<div class="pv-calc-empty">No pets added yet</div>'; return; }
-  el.innerHTML=calcSides[side].map((p,i)=>`<div class="pv-calc-item">
-    <span class="pv-item-name">${p.name}</span>
-    <span class="pv-item-value">${formatValue(valueFor(p))}</span>
-    <button class="pv-item-remove" onclick="removeFromSide('${side}',${i})">✕</button>
-  </div>`).join('');
+  const items=calcSides[side];
+  const addSlot=`<div class="pv-calc-slot pv-add-slot">
+    <button class="pv-add-btn" onclick="openAddModal('${side}')" title="Add a pet">+</button>
+  </div>`;
+  const filled=items.map((item,i)=>{
+    const badges=[];
+    if(item.variant==='neon') badges.push({letter:'N',shape:'circle',cls:'pv-tag-n'});
+    if(item.variant==='mega') badges.push({letter:'M',shape:'circle',cls:'pv-tag-m'});
+    if(item.fly) badges.push({letter:'F',shape:'square',cls:'pv-tag-f'});
+    if(item.ride) badges.push({letter:'R',shape:'square',cls:'pv-tag-r'});
+    const wrapCls=badges.length>1?'pv-tags-bar':'pv-tags-single';
+    const tags=badges.length?`<div class="pv-slot-tags ${wrapCls}">${badges.map(b=>`<span class="pv-tag-badge pv-tag-${b.shape} ${b.cls}">${b.letter}</span>`).join('')}</div>`:'';
+    return `<div class="pv-calc-slot" title="${item.pet.name}">
+      ${petImgHtml(item.pet.rarity,item.pet.name)}
+      <span class="pv-slot-value">${formatValue(valueForVariant(item.pet,item.variant))}</span>
+      ${tags}
+      <button class="pv-slot-remove" onclick="removeFromSide('${side}',${i})">✕</button>
+    </div>`;
+  }).join('');
+  const emptyCount=Math.max(0,PV_MIN_SLOTS-1-items.length);
+  const empty='<div class="pv-calc-slot pv-slot-empty"></div>'.repeat(emptyCount);
+  el.innerHTML=addSlot+filled+empty;
+  observeImages(el);
 }
 
 function renderFairness(){
@@ -178,10 +301,12 @@ function renderFairness(){
   if(!you&&!them){ el.innerHTML='<span class="pv-fair-arrow">⇄</span><span class="pv-fair-badge pv-fair-even">Add pets to compare</span>'; return; }
   const diff=you-them;
   const pct=Math.abs(diff)/Math.max(you,them,1);
-  let cls='pv-fair-even',text='Fair trade';
-  if(pct>=0.35){ cls='pv-fair-skewed'; text=diff>0?`Your side is worth ${formatValue(diff)} more`:`Their side is worth ${formatValue(-diff)} more`; }
-  else if(pct>=0.1){ cls='pv-fair-mild'; text=diff>0?`Your side is worth ${formatValue(diff)} more`:`Their side is worth ${formatValue(-diff)} more`; }
-  el.innerHTML=`<span class="pv-fair-arrow">⇄</span><span class="pv-fair-badge ${cls}">${text}</span>`;
+  let cls='pv-fair-even';
+  if(pct>=0.35) cls='pv-fair-skewed';
+  else if(pct>=0.1) cls='pv-fair-mild';
+  const sign=diff>0?'+':diff<0?'−':'';
+  const text=`${sign}${formatValue(Math.abs(diff))}`;
+  el.innerHTML=`<span class="pv-fair-arrow">⇄</span><span class="pv-fair-badge ${cls} pv-fair-number">${text}</span>`;
 }
 
 function renderCalculatorTab(){
@@ -191,12 +316,6 @@ function renderCalculatorTab(){
   renderCalcItems('them');
   renderFairness();
 }
-
-document.addEventListener('click',e=>{
-  if(!e.target.closest('.pv-calc-picker')){
-    document.querySelectorAll('.pv-calc-picker-list.open').forEach(l=>l.classList.remove('open'));
-  }
-});
 
 // ── DATA LOADING ──────────────────────────────────────────────────
 async function loadValues(){

@@ -11,7 +11,7 @@
 
 <header class="site-header">
   <div class="site-header-top">
-    <button class="nav-toggle" onclick="toggleNavPanel()" title="Switch page">▦</button>
+    <button class="nav-toggle" onclick="toggleNavPanel()" title="Switch page">☰</button>
     <div class="site-title">
       <h1>AMI</h1>
       <p>Pet Values & Calculator</p>
@@ -82,15 +82,11 @@
     <div class="pv-calc">
       <div class="pv-calc-side" data-side="you">
         <div class="pv-calc-head">
-          <h3>Your Side</h3>
+          <h3>Your Offer</h3>
           <span class="pv-calc-total" id="pv-total-you">0</span>
           <button class="pv-clear-btn" onclick="clearSide('you')" title="Clear side">🗑</button>
         </div>
-        <div class="pv-calc-picker">
-          <input type="text" class="pv-calc-search" id="pv-search-you" placeholder="Add a pet…" oninput="renderPicker('you')" autocomplete="off">
-          <div class="pv-calc-picker-list" id="pv-picker-you"></div>
-        </div>
-        <div class="pv-calc-items" id="pv-items-you"></div>
+        <div class="pv-calc-slots" id="pv-items-you"></div>
       </div>
 
       <div class="pv-calc-fair" id="pv-fairness">
@@ -100,15 +96,11 @@
 
       <div class="pv-calc-side" data-side="them">
         <div class="pv-calc-head">
-          <h3>Their Side</h3>
+          <h3>Their Offer</h3>
           <span class="pv-calc-total" id="pv-total-them">0</span>
           <button class="pv-clear-btn" onclick="clearSide('them')" title="Clear side">🗑</button>
         </div>
-        <div class="pv-calc-picker">
-          <input type="text" class="pv-calc-search" id="pv-search-them" placeholder="Add a pet…" oninput="renderPicker('them')" autocomplete="off">
-          <div class="pv-calc-picker-list" id="pv-picker-them"></div>
-        </div>
-        <div class="pv-calc-items" id="pv-items-them"></div>
+        <div class="pv-calc-slots" id="pv-items-them"></div>
       </div>
     </div>
   </div>
@@ -140,6 +132,26 @@
 
 <div class="nav-overlay" id="nav-overlay">
   <nav class="nav-panel" id="nav-panel"></nav>
+</div>
+
+<div class="modal-overlay" id="pv-add-overlay">
+  <div class="pv-add-modal">
+    <div class="pv-add-modal-head">
+      <input type="text" id="pv-add-search" placeholder="Search…" oninput="renderAddResults()" autocomplete="off">
+      <button class="pv-add-close" onclick="closeAddModal()" title="Close">✕</button>
+    </div>
+    <div class="pv-add-modal-body">
+      <nav class="pv-add-categories" id="pv-add-categories"></nav>
+      <div class="pv-add-results-grid" id="pv-add-results"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="pv-attr-overlay">
+  <div class="pv-attr-panel">
+    <button class="pv-add-close" onclick="closeAttrPanel()" title="Close">✕</button>
+    <div id="pv-attr-body"></div>
+  </div>
 </div>
 
 <script src="shared.js"></script>

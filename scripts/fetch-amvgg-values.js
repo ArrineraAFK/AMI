@@ -10,8 +10,41 @@ const fs = require('fs');
 const path = require('path');
 
 const VALUES_PATH = path.join(__dirname, '..', 'values.json');
+const PETS_PATH = path.join(__dirname, '..', 'pets.json');
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36';
 const DELAY_MS = 400; // be polite between requests
+const RARITY_ORDER = ['common', 'uncommon', 'rare', 'ultrarare', 'legendary'];
+
+function emptySources() {
+  return {
+    amvgg: {
+      baseless: { regular: null, neon: null, mega: null }
+    },
+    elvebredd: {
+      frost: { regular: null, neon: null, mega: null },
+      shark: { regular: null, neon: null, mega: null }
+    }
+  };
+}
+
+// Adds any pet from pets.json (the Collections tracker's pet list) that isn't
+// in values.json yet, so newly added pets get picked up automatically on the
+// next run instead of staying invisible until someone edits values.json by hand.
+function syncNewPetsFromPetsJson(data) {
+  const petsData = JSON.parse(fs.readFileSync(PETS_PATH, 'utf8'));
+  const known = new Set(data.pets.map(p => p.name));
+  let added = 0;
+  RARITY_ORDER.forEach(rarity => {
+    (petsData.pets[rarity] || []).forEach(p => {
+      if (known.has(p.name)) return;
+      data.pets.push({ name: p.name, rarity, origin: null, sources: emptySources() });
+      known.add(p.name);
+      added++;
+    });
+  });
+  if (added) console.log(`Synced ${added} new pet(s) from pets.json.`);
+  return data;
+}
 
 function slugify(name) {
   return name.replace(/ /g, '_');
@@ -85,6 +118,7 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 // live in pet-values.js at render time instead of being duplicated here.
 async function main() {
   const data = JSON.parse(fs.readFileSync(VALUES_PATH, 'utf8'));
+  syncNewPetsFromPetsJson(data);
   let updated = 0, failed = [];
 
   for (const pet of data.pets) {

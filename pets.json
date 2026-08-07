@@ -71,6 +71,11 @@
       "type": "event"
     },
     {
+      "id": "birthday_2026",
+      "name": "Birthday 2026",
+      "type": "event"
+    },
+    {
       "id": "birthday_magic_2026",
       "name": "Birthday Magic 2026",
       "type": "event"
@@ -777,6 +782,7 @@
       {"name": "2021 Uplift Butterfly", "collection": "adopt_mes_bday_2021"},
       {"name": "2022 Uplift Butterfly", "collection": "birthday_2022"},
       {"name": "2025 Birthday Butterfly", "collection": "birthday_2025"},
+      {"name": "2026 Birthday Butterfly", "collection": "birthday_2026"},
       {"name": "Amami Rabbit", "collection": "lunar_new_year_2023"},
       {"name": "Angler Fish", "collection": "danger_2023"},
       {"name": "Arctic Hare", "collection": "winter_2023"},
@@ -1040,6 +1046,7 @@
       {"name": "Burning Bunny", "collection": "fire_dimension_2024"},
       {"name": "Business Monkey", "collection": "monkey_2020"},
       {"name": "Cabbit", "collection": "spring_2025"},
+      {"name": "Cake Friend", "collection": "birthday_2026"},
       {"name": "Candy Cane Snail", "collection": "easter_2024"},
       {"name": "Caterpillar", "collection": "farm_2023"},
       {"name": "Chef Gorilla", "collection": "gorilla_2023"},
@@ -1216,7 +1223,7 @@
       {"name": "Tri-horned Treehopper", "collection": "ugc_2025"},
       {"name": "Turkey", "collection": "farm_egg_2019"},
       {"name": "Unicorn Ducky", "collection": "stormy_ducky_2026"},
-      {"name": "Vermillion Butterfly", "collection": "butterfly_2025"},
+      {"name": "Vermilion Butterfly", "collection": "butterfly_2025"},
       {"name": "Vulture", "collection": "desert_2024"},
       {"name": "Waffle Wyrm", "collection": "sugarfest_2026"},
       {"name": "Water Moon Bear", "collection": "lunar_new_year_2023"},

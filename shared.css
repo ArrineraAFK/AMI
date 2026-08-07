@@ -85,9 +85,9 @@ body.dark .view-tabs{border-color:#333}
 
 /* ── PET ICON + RARITY TOKENS (used by shared petImgHtml/rarityFooterHtml helpers) ── */
 .pet-img-wrap{width:64px;height:64px;position:relative;flex-shrink:0}
-.pet-img{width:64px;height:64px;object-fit:contain;border-radius:4px;display:none;position:relative;z-index:1;opacity:0;transition:opacity 0.3s ease}
+.pet-img{width:100%;height:100%;object-fit:contain;border-radius:4px;display:none;position:relative;z-index:1;opacity:0;transition:opacity 0.3s ease}
 .pet-img.loaded{display:block;opacity:1}
-.pet-img-placeholder{position:absolute;top:0;left:0;width:64px;height:64px;border-radius:4px;background:#f5f4f0;display:flex;align-items:center;justify-content:center;font-size:22px;z-index:0;overflow:hidden}
+.pet-img-placeholder{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:4px;background:#f5f4f0;display:flex;align-items:center;justify-content:center;font-size:22px;z-index:0;overflow:hidden}
 .pet-img-placeholder::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.6) 50%,transparent 100%);transform:translateX(-100%);animation:shimmer 1.4s infinite}
 @keyframes shimmer{to{transform:translateX(100%)}}
 .pet-name{width:100%;word-break:break-word}
@@ -151,7 +151,7 @@ body.dark .sf-divider{background:#333}
 /* ── POPOUT NAV PANEL ── */
 .nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,0);pointer-events:none;z-index:500;transition:background-color 0.25s ease}
 .nav-overlay.open{background:rgba(0,0,0,0.4);pointer-events:auto}
-.nav-panel{position:fixed;top:0;left:0;bottom:0;width:260px;max-width:80vw;background:#fff;box-shadow:4px 0 24px rgba(0,0,0,0.15);padding:1rem;transform:translateX(-100%);transition:transform 0.25s ease;display:flex;flex-direction:column;gap:6px}
+.nav-panel{position:fixed;top:0;left:0;bottom:1rem;width:260px;max-width:80vw;background:#fff;border-radius:0 0 14px 0;box-shadow:4px 0 24px rgba(0,0,0,0.15);padding:1rem;transform:translateX(-100%);transition:transform 0.25s ease;display:flex;flex-direction:column;gap:6px}
 .nav-overlay.open .nav-panel{transform:translateX(0)}
 .nav-panel h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#999;margin-bottom:6px}
 .nav-page-btn{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;border:1px solid #e0ddd5;background:#fff;cursor:pointer;font-size:14px;font-weight:500;color:#1a1a1a;text-align:left;-webkit-tap-highlight-color:transparent}
