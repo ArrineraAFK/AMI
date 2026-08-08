@@ -14,29 +14,33 @@ function currentSourceObj(){ return SOURCES.find(s=>s.id===currentSource); }
 function valueTypesFor(sourceId){ const s=SOURCES.find(s=>s.id===sourceId); return (s&&s.valueTypes)||[]; }
 
 // Some value types aren't stored per-pet — they're just a source's "baseless"
-// value divided by a fixed reference pet's own baseless value, rounded to 2
-// decimals (confirmed against the live site). Computed live so values.json
-// only ever has to carry one number per pet per source.
+// value (both-potions/FR tier value) divided by a fixed reference pet's own
+// baseless value, rounded to 2 decimals (confirmed against the live site).
+// Computed live so values.json only ever has to carry the raw baseless matrix.
 const DERIVED_VALUE_TYPES={
   amvgg:{
-    frost:1.65,        // Frost Dragon's regular baseless value on AMVGG
-    ridepotion:0.0064936 // Ride-A-Pet Potion's true regular baseless value on AMVGG,
+    frost:1.65,        // Frost Dragon's regular/both baseless value on AMVGG
+    ridepotion:0.0064936 // Ride-A-Pet Potion's true regular/both baseless value on AMVGG,
     // least-squares fit from 12 known site values (displayed as "0.0065", itself rounded)
   }
 };
 function round2(n){ return Math.round(n*100)/100; }
-function valueForVariant(p,variant){
+function potionFor(ride,fly){ return ride&&fly?'both':fly?'fly':ride?'ride':'none'; }
+// tier: 'regular'|'neon'|'mega'. potion: 'both'|'fly'|'ride'|'none' (default 'both'/FR).
+function valueForCombo(p,tier,potion){
   const src=p.sources&&p.sources[currentSource];
   if(!src) return null;
   const derived=DERIVED_VALUE_TYPES[currentSource];
   const divisor=derived&&derived[currentValueType];
   if(divisor!=null){
-    const base=src.baseless&&src.baseless[variant];
+    const base=src.baseless&&src.baseless[tier]&&src.baseless[tier][potion||'both'];
     return base==null?null:round2(base/divisor);
   }
   const vt=src[currentValueType];
-  return vt?(vt[variant]??null):null;
+  const t=vt&&vt[tier];
+  return t?(t[potion||'both']??null):null;
 }
+function valueForVariant(p,variant){ return valueForCombo(p,variant,'both'); }
 function valueFor(p){ return valueForVariant(p,currentVariant); }
 
 // ── VALUE SOURCE + VALUE-TYPE SWITCHERS ───────────────────────────
@@ -220,7 +224,7 @@ function toggleAttrRide(){ attrRide=!attrRide; renderAttrPanel(); }
 function toggleAttrFly(){ attrFly=!attrFly; renderAttrPanel(); }
 function renderAttrPanel(){
   if(!attrPet)return;
-  const val=valueForVariant(attrPet,attrVariant);
+  const val=valueForCombo(attrPet,attrVariant,potionFor(attrRide,attrFly));
   const actions=attrTarget
     ? `<button onclick="confirmAttrAdd('${attrTarget}')">Add to ${attrTarget==='you'?'Your':'Their'} Side</button>`
     : `<button onclick="confirmAttrAdd('you')">Add to Your Side</button><button onclick="confirmAttrAdd('them')">Add to Their Side</button>`;
@@ -238,7 +242,6 @@ function renderAttrPanel(){
       <button class="pv-attr-chip${attrRide?' active':''}" onclick="toggleAttrRide()">🐴 Ride</button>
       <button class="pv-attr-chip${attrFly?' active':''}" onclick="toggleAttrFly()">🪽 Fly</button>
     </div>
-    <p class="pv-attr-note">Ride/Fly are tags only for now — no pricing data available yet, so they don't change the value.</p>
     <div class="pv-attr-value">${formatValue(val)}</div>
     <div class="pv-attr-actions">${actions}</div>
   `;
@@ -265,7 +268,7 @@ function clearSide(side){
   openConfirmModal('Clear side','Remove all pets from this side?',()=>{ calcSides[side]=[]; renderCalculatorTab(); });
 }
 
-function sideTotal(side){ return calcSides[side].reduce((s,item)=>s+(valueForVariant(item.pet,item.variant)||0),0); }
+function sideTotal(side){ return calcSides[side].reduce((s,item)=>s+(valueForCombo(item.pet,item.variant,potionFor(item.ride,item.fly))||0),0); }
 
 const PV_MIN_SLOTS=6;
 function renderCalcItems(side){
@@ -284,7 +287,7 @@ function renderCalcItems(side){
     const tags=badges.length?`<div class="pv-slot-tags ${wrapCls}">${badges.map(b=>`<span class="pv-tag-badge pv-tag-${b.shape} ${b.cls}">${b.letter}</span>`).join('')}</div>`:'';
     return `<div class="pv-calc-slot" title="${item.pet.name}">
       ${petImgHtml(item.pet.rarity,item.pet.name)}
-      <span class="pv-slot-value">${formatValue(valueForVariant(item.pet,item.variant))}</span>
+      <span class="pv-slot-value">${formatValue(valueForCombo(item.pet,item.variant,potionFor(item.ride,item.fly)))}</span>
       ${tags}
       <button class="pv-slot-remove" onclick="removeFromSide('${side}',${i})">✕</button>
     </div>`;

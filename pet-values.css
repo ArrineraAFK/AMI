@@ -88,8 +88,7 @@ body.dark .pv-attr-panel{background:#2a2a2a}
 .pv-attr-chip.active{border-color:#185FA5;color:#185FA5;background:#EBF3FD}
 body.dark .pv-attr-chip{background:#333;border-color:#444;color:#aaa}
 body.dark .pv-attr-chip.active{border-color:#7F77DD;color:#c5c2f0;background:#2a2840}
-.pv-attr-note{font-size:10px;color:#999;text-align:center;margin-bottom:0.6rem;line-height:1.4}
-.pv-attr-value{font-size:22px;font-weight:800;text-align:center;color:#0F6E56;margin-bottom:0.75rem}
+.pv-attr-value{font-size:22px;font-weight:800;text-align:center;color:#0F6E56;margin-top:0.75rem;margin-bottom:0.75rem}
 body.dark .pv-attr-value{color:#4fd8ab}
 .pv-attr-actions{display:flex;flex-direction:column;gap:6px}
 .pv-attr-actions button{padding:9px;border-radius:8px;font-size:13px;cursor:pointer;border:1px solid #1a1a1a;background:#1a1a1a;color:#fff;-webkit-tap-highlight-color:transparent}
