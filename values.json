@@ -2024,77 +2024,6 @@
       }
     },
     {
-      "name": "Frankefeline",
-      "rarity": "common",
-      "origin": null,
-      "sources": {
-        "amvgg": {
-          "baseless": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        },
-        "elvebredd": {
-          "frost": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          },
-          "shark": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        }
-      }
-    },
-    {
       "name": "Galapagos Sea Lion",
       "rarity": "common",
       "origin": null,
@@ -2754,77 +2683,6 @@
             },
             "mega": {
               "both": 0.03,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        },
-        "elvebredd": {
-          "frost": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          },
-          "shark": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Malayan Tapir",
-      "rarity": "common",
-      "origin": null,
-      "sources": {
-        "amvgg": {
-          "baseless": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
               "fly": null,
               "ride": null,
               "none": null
@@ -10757,77 +10615,6 @@
       }
     },
     {
-      "name": "Yellow-lipped Sea Krait",
-      "rarity": "uncommon",
-      "origin": null,
-      "sources": {
-        "amvgg": {
-          "baseless": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        },
-        "elvebredd": {
-          "frost": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          },
-          "shark": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        }
-      }
-    },
-    {
       "name": "Abyssinian Cat",
       "rarity": "rare",
       "origin": null,
@@ -13688,77 +13475,6 @@
             },
             "mega": {
               "both": 0.02,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        },
-        "elvebredd": {
-          "frost": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          },
-          "shark": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Giant Ant Eater",
-      "rarity": "rare",
-      "origin": null,
-      "sources": {
-        "amvgg": {
-          "baseless": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
               "fly": null,
               "ride": null,
               "none": null
@@ -18496,77 +18212,6 @@
       }
     },
     {
-      "name": "Ring-tailed Lemur",
-      "rarity": "rare",
-      "origin": null,
-      "sources": {
-        "amvgg": {
-          "baseless": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        },
-        "elvebredd": {
-          "frost": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          },
-          "shark": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        }
-      }
-    },
-    {
       "name": "Samoyed",
       "rarity": "rare",
       "origin": null,
@@ -20007,77 +19652,6 @@
             },
             "mega": {
               "both": 0.075,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        },
-        "elvebredd": {
-          "frost": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          },
-          "shark": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "The Black Dog",
-      "rarity": "rare",
-      "origin": null,
-      "sources": {
-        "amvgg": {
-          "baseless": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
               "fly": null,
               "ride": null,
               "none": null
@@ -35333,77 +34907,6 @@
       }
     },
     {
-      "name": "Vermillion Butterfly",
-      "rarity": "ultrarare",
-      "origin": null,
-      "sources": {
-        "amvgg": {
-          "baseless": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        },
-        "elvebredd": {
-          "frost": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          },
-          "shark": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        }
-      }
-    },
-    {
       "name": "Vulture",
       "rarity": "ultrarare",
       "origin": null,
@@ -35921,77 +35424,6 @@
             },
             "mega": {
               "both": 0.035,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        },
-        "elvebredd": {
-          "frost": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          },
-          "shark": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Wood Pidgeon",
-      "rarity": "ultrarare",
-      "origin": null,
-      "sources": {
-        "amvgg": {
-          "baseless": {
-            "regular": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "neon": {
-              "both": null,
-              "fly": null,
-              "ride": null,
-              "none": null
-            },
-            "mega": {
-              "both": null,
               "fly": null,
               "ride": null,
               "none": null
@@ -53201,19 +52633,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": null,
+              "both": 0.055,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": null,
+              "both": 0.22,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": null,
+              "both": 0.9,
               "fly": null,
               "ride": null,
               "none": null
@@ -55048,7 +54480,504 @@
           }
         }
       }
+    },
+    {
+      "name": "Frankenfeline",
+      "rarity": "common",
+      "origin": null,
+      "sources": {
+        "amvgg": {
+          "baseless": {
+            "regular": {
+              "both": 0.0035,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": 0.007,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": 0.02,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          },
+          "shark": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Malaysian Tapir",
+      "rarity": "common",
+      "origin": null,
+      "sources": {
+        "amvgg": {
+          "baseless": {
+            "regular": {
+              "both": 0.0055,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": 0.011,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": 0.04,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          },
+          "shark": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Yellow-Lipped Sea Krait",
+      "rarity": "uncommon",
+      "origin": null,
+      "sources": {
+        "amvgg": {
+          "baseless": {
+            "regular": {
+              "both": 0.004,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": 0.008,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": 0.025,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          },
+          "shark": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Giant Anteater",
+      "rarity": "rare",
+      "origin": null,
+      "sources": {
+        "amvgg": {
+          "baseless": {
+            "regular": {
+              "both": 0.035,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": 0.145,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": 0.6,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          },
+          "shark": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Ring-Tailed Lemur",
+      "rarity": "rare",
+      "origin": null,
+      "sources": {
+        "amvgg": {
+          "baseless": {
+            "regular": {
+              "both": 0.03,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": 0.125,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": 0.525,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          },
+          "shark": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Black Dog",
+      "rarity": "rare",
+      "origin": null,
+      "sources": {
+        "amvgg": {
+          "baseless": {
+            "regular": {
+              "both": 0.0045,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": 0.009,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": 0.03,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          },
+          "shark": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Wood Pigeon",
+      "rarity": "ultrarare",
+      "origin": null,
+      "sources": {
+        "amvgg": {
+          "baseless": {
+            "regular": {
+              "both": 0.015,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": 0.06,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": 0.24,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        },
+        "elvebredd": {
+          "frost": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          },
+          "shark": {
+            "regular": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "neon": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            },
+            "mega": {
+              "both": null,
+              "fly": null,
+              "ride": null,
+              "none": null
+            }
+          }
+        }
+      }
     }
   ],
-  "lastFetchedAt": "2026-08-08T17:45:28.703Z"
+  "lastFetchedAt": "2026-08-08T18:01:35.108Z"
 }

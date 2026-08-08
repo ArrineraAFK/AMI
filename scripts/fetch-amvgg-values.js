@@ -54,8 +54,30 @@ function syncNewPetsFromPetsJson(data) {
   return data;
 }
 
+// Removes values.json entries whose name no longer appears anywhere in
+// pets.json (e.g. a spelling fix there orphans the old name here) — keeps
+// the list from silently accumulating stale duplicates over time.
+function removeStalePets(data) {
+  const petsData = JSON.parse(fs.readFileSync(PETS_PATH, 'utf8'));
+  const stillKnown = new Set();
+  RARITY_ORDER.forEach(rarity => (petsData.pets[rarity] || []).forEach(p => stillKnown.add(p.name)));
+  const before = data.pets.length;
+  const removedNames = data.pets.filter(p => !stillKnown.has(p.name)).map(p => p.name);
+  data.pets = data.pets.filter(p => stillKnown.has(p.name));
+  if (removedNames.length) console.log(`Removed ${removedNames.length} stale pet(s) no longer in pets.json: ${removedNames.join(', ')}`);
+  return data;
+}
+
 function slugify(name) {
   return name.replace(/ /g, '_');
+}
+
+// Different sites spell special characters differently (accents, etc.) — e.g.
+// "Tió De Nadal" only exists on AMVGG as "Tio De Nadal". Strip diacritics as
+// a fallback spelling to try when the exact name doesn't resolve.
+const DIACRITIC_MARKS_RE = new RegExp('[̀-ͯ]', 'g');
+function stripDiacritics(name) {
+  return name.normalize('NFD').replace(DIACRITIC_MARKS_RE, '');
 }
 
 function balancedSpan(text, start, openChar, closeChar) {
@@ -98,14 +120,23 @@ async function fetchPetsListMatrix() {
   const list = extractEscapedJson(html, '\\"pets\\":[', '[', ']');
   if (!list) throw new Error('pets array not found on /values/pets');
   const byName = new Map();
+  const byStrippedName = new Map();
   list.forEach(p => {
-    byName.set(p.name, {
+    const entry = {
       regular: { both: num(p.regularValue), fly: num(p.fValue), ride: num(p.rValue), none: num(p.npRegularValue) },
       neon: { both: num(p.neonValue), fly: num(p.nfValue), ride: num(p.nrValue), none: num(p.npNeonValue) },
       mega: { both: num(p.megaValue), fly: num(p.mfValue), ride: num(p.mrValue), none: num(p.npMegaValue) }
-    });
+    };
+    byName.set(p.name, entry);
+    const stripped = stripDiacritics(p.name);
+    if (!byStrippedName.has(stripped)) byStrippedName.set(stripped, entry);
   });
-  return byName;
+  // Different sites (and our own pets.json) don't always spell special
+  // characters the same way, so also allow matching by a diacritic-stripped name.
+  return {
+    size: byName.size,
+    get(name) { return byName.get(name) || byStrippedName.get(stripDiacritics(name)); }
+  };
 }
 
 // ── Per-item fallback: /pet/<Name> then /egg/<Name> (only gives "both") ──
@@ -122,31 +153,40 @@ function extractDataBlock(html, key) {
   return null;
 }
 async function fetchEntryFallback(name) {
-  const slug = slugify(name);
+  const candidates = [name];
+  const stripped = stripDiacritics(name);
+  if (stripped !== name) candidates.push(stripped);
 
-  const petRes = await fetch(`https://amvgg.com/pet/${slug}`, { headers: { 'User-Agent': USER_AGENT } });
-  if (petRes.ok) {
-    const obj = extractDataBlock(await petRes.text(), 'pet');
-    if (obj) {
-      const b = emptyBaseless();
-      b.regular.both = num(obj.regularValue);
-      b.neon.both = num(obj.neonValue);
-      b.mega.both = num(obj.megaValue);
-      return b;
+  let lastPetStatus, lastEggStatus;
+  for (const candidate of candidates) {
+    const slug = slugify(candidate);
+
+    const petRes = await fetch(`https://amvgg.com/pet/${slug}`, { headers: { 'User-Agent': USER_AGENT } });
+    lastPetStatus = petRes.status;
+    if (petRes.ok) {
+      const obj = extractDataBlock(await petRes.text(), 'pet');
+      if (obj) {
+        const b = emptyBaseless();
+        b.regular.both = num(obj.regularValue);
+        b.neon.both = num(obj.neonValue);
+        b.mega.both = num(obj.megaValue);
+        return b;
+      }
+    }
+
+    const eggRes = await fetch(`https://amvgg.com/egg/${slug}`, { headers: { 'User-Agent': USER_AGENT } });
+    lastEggStatus = eggRes.status;
+    if (eggRes.ok) {
+      const obj = extractDataBlock(await eggRes.text(), 'item');
+      if (obj) {
+        const b = emptyBaseless();
+        b.regular.both = num(obj.value);
+        return b;
+      }
     }
   }
 
-  const eggRes = await fetch(`https://amvgg.com/egg/${slug}`, { headers: { 'User-Agent': USER_AGENT } });
-  if (eggRes.ok) {
-    const obj = extractDataBlock(await eggRes.text(), 'item');
-    if (obj) {
-      const b = emptyBaseless();
-      b.regular.both = num(obj.value);
-      return b;
-    }
-  }
-
-  throw new Error(`not found (pet: ${petRes.status}, egg: ${eggRes.status})`);
+  throw new Error(`not found (pet: ${lastPetStatus}, egg: ${lastEggStatus})`);
 }
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
@@ -154,6 +194,7 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 async function main() {
   const data = JSON.parse(fs.readFileSync(VALUES_PATH, 'utf8'));
   syncNewPetsFromPetsJson(data);
+  removeStalePets(data);
 
   console.log('Fetching /values/pets matrix...');
   const matrix = await fetchPetsListMatrix();
