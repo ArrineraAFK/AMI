@@ -18574,19 +18574,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.004,
+              "both": 0.00375,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.008,
+              "both": 0.0075,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.025,
+              "both": 0.0225,
               "fly": null,
               "ride": null,
               "none": null
@@ -22347,19 +22347,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.16,
+              "both": 0.165,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.39,
+              "both": 0.405,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 1.54,
+              "both": 1.6,
               "fly": null,
               "ride": null,
               "none": null
@@ -23347,16 +23347,16 @@
               "none": 0.33
             },
             "neon": {
-              "both": 1.125,
-              "fly": 1.125,
-              "ride": 1.125,
-              "none": 1.15
+              "both": 1.175,
+              "fly": 1.175,
+              "ride": 1.175,
+              "none": 1.2
             },
             "mega": {
-              "both": 4.5,
-              "fly": 4.55,
-              "ride": 4.55,
-              "none": 4.85
+              "both": 4.7,
+              "fly": 4.75,
+              "ride": 4.75,
+              "none": 5.05
             }
           }
         },
@@ -26329,16 +26329,16 @@
               "none": 0.385
             },
             "neon": {
-              "both": 1.44,
-              "fly": 1.44,
-              "ride": 1.44,
-              "none": 1.46
+              "both": 1.475,
+              "fly": 1.475,
+              "ride": 1.475,
+              "none": 1.5
             },
             "mega": {
-              "both": 5.76,
-              "fly": 5.8,
-              "ride": 5.8,
-              "none": 6.15
+              "both": 5.9,
+              "fly": 5.95,
+              "ride": 5.95,
+              "none": 6.3
             }
           }
         },
@@ -30157,19 +30157,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.175,
+              "both": 0.1825,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.69,
+              "both": 0.72,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 2.76,
+              "both": 2.88,
               "fly": null,
               "ride": null,
               "none": null
@@ -36334,19 +36334,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.01,
+              "both": 0.0095,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.04,
+              "both": 0.0375,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.16,
+              "both": 0.15,
               "fly": null,
               "ride": null,
               "none": null
@@ -36405,19 +36405,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.0255,
+              "both": 0.028,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.1025,
+              "both": 0.1125,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.41,
+              "both": 0.45,
               "fly": null,
               "ride": null,
               "none": null
@@ -37059,7 +37059,7 @@
               "both": 37.25,
               "fly": 37.5,
               "ride": 37.4,
-              "none": 39.85
+              "none": 40
             }
           }
         },
@@ -37825,19 +37825,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.0285,
+              "both": 0.029,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.115,
+              "both": 0.1175,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.46,
+              "both": 0.47,
               "fly": null,
               "ride": null,
               "none": null
@@ -38464,7 +38464,7 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.205,
+              "both": 0.215,
               "fly": null,
               "ride": null,
               "none": null
@@ -39103,16 +39103,16 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 1.04,
-              "fly": 1.035,
-              "ride": 1.035,
-              "none": 1.03
+              "both": 1,
+              "fly": 0.995,
+              "ride": 0.995,
+              "none": 0.99
             },
             "neon": {
-              "both": 2.765,
-              "fly": 2.765,
-              "ride": 2.765,
-              "none": 2.78
+              "both": 2.66,
+              "fly": 2.66,
+              "ride": 2.66,
+              "none": 2.68
             },
             "mega": {
               "both": 8.15,
@@ -40239,19 +40239,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.0325,
+              "both": 0.0375,
               "fly": 0.1225,
               "ride": 0.1225,
               "none": 0.12
             },
             "neon": {
-              "both": 0.1325,
+              "both": 0.155,
               "fly": 0.52,
               "ride": 0.52,
               "none": 0.52
             },
             "mega": {
-              "both": 0.55,
+              "both": 0.65,
               "fly": 2.125,
               "ride": 2.125,
               "none": 2.125
@@ -40523,19 +40523,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.01,
+              "both": 0.009,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.04,
+              "both": 0.0325,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.16,
+              "both": 0.13,
               "fly": null,
               "ride": null,
               "none": null
@@ -41239,13 +41239,13 @@
               "none": null
             },
             "neon": {
-              "both": 0.0325,
+              "both": 0.03,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.13,
+              "both": 0.12,
               "fly": null,
               "ride": null,
               "none": null
@@ -41598,19 +41598,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.125,
+              "both": 0.135,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.35,
+              "both": 0.385,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 1.375,
+              "both": 1.525,
               "fly": null,
               "ride": null,
               "none": null
@@ -42592,19 +42592,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.2225,
+              "both": 0.245,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.91,
+              "both": 1,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 3.75,
+              "both": 4.1,
               "fly": null,
               "ride": null,
               "none": null
@@ -44793,7 +44793,7 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.1875,
+              "both": 0.195,
               "fly": null,
               "ride": null,
               "none": null
@@ -45726,7 +45726,7 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.55,
+              "both": 0.565,
               "fly": null,
               "ride": null,
               "none": null
@@ -45797,19 +45797,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.06,
+              "both": 0.0575,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.245,
+              "both": 0.23,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 1,
+              "both": 0.95,
               "fly": null,
               "ride": null,
               "none": null
@@ -47998,19 +47998,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.0125,
+              "both": 0.013,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.05,
+              "both": 0.0525,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.2,
+              "both": 0.21,
               "fly": null,
               "ride": null,
               "none": null
@@ -48708,19 +48708,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.01,
+              "both": 0.0095,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.04,
+              "both": 0.0375,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.16,
+              "both": 0.15,
               "fly": null,
               "ride": null,
               "none": null
@@ -49641,19 +49641,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.0185,
+              "both": 0.021,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.075,
+              "both": 0.085,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.3,
+              "both": 0.34,
               "fly": null,
               "ride": null,
               "none": null
@@ -51015,7 +51015,7 @@
               "both": 18.2,
               "fly": 19,
               "ride": 19.8,
-              "none": 28.65
+              "none": 28.75
             }
           }
         },
@@ -51284,19 +51284,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.0875,
+              "both": 0.0825,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.31,
+              "both": 0.29,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 1.175,
+              "both": 1.1,
               "fly": null,
               "ride": null,
               "none": null
@@ -51852,19 +51852,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.21,
+              "both": 0.22,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.61,
+              "both": 0.625,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 2.39,
+              "both": 2.45,
               "fly": null,
               "ride": null,
               "none": null
@@ -52710,13 +52710,13 @@
               "none": null
             },
             "neon": {
-              "both": 0.57,
+              "both": 0.575,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 2.35,
+              "both": 2.375,
               "fly": null,
               "ride": null,
               "none": null
@@ -52927,19 +52927,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.64,
+              "both": 0.67,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 1.725,
+              "both": 1.775,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 6.25,
+              "both": 6.15,
               "fly": null,
               "ride": null,
               "none": null
@@ -53566,7 +53566,7 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.18,
+              "both": 0.1875,
               "fly": null,
               "ride": null,
               "none": null
@@ -54063,19 +54063,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.0125,
+              "both": 0.013,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.05,
+              "both": 0.0525,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.2,
+              "both": 0.21,
               "fly": null,
               "ride": null,
               "none": null
@@ -54347,19 +54347,19 @@
         "amvgg": {
           "baseless": {
             "regular": {
-              "both": 0.009,
+              "both": 0.0085,
               "fly": null,
               "ride": null,
               "none": null
             },
             "neon": {
-              "both": 0.03,
+              "both": 0.0275,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.12,
+              "both": 0.11,
               "fly": null,
               "ride": null,
               "none": null
@@ -54708,13 +54708,13 @@
               "none": null
             },
             "neon": {
-              "both": 0.17,
+              "both": 0.1725,
               "fly": null,
               "ride": null,
               "none": null
             },
             "mega": {
-              "both": 0.7,
+              "both": 0.71,
               "fly": null,
               "ride": null,
               "none": null
@@ -54979,5 +54979,5 @@
       }
     }
   ],
-  "lastFetchedAt": "2026-09-13T10:42:42.900Z"
+  "lastFetchedAt": "2026-09-16T10:23:13.240Z"
 }
